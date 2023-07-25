@@ -12,21 +12,21 @@ namespace HomeWork1
         public void Add(double a, double b)
         {
             double result = a + b;
-            Console.WriteLine("Сумма чисел: " + result);
+            ShowResult("Сумма чисел", result);
         }
 
         //вічетание
         public void Subtract(double a, double b)
         {
             double result = a - b;
-            Console.WriteLine("Разность чисел: " + result);
+            ShowResult("Разность чисе", result);
         }
 
         //умножение
         public void Multiply(double a, double b)
         {
             double result = a * b;
-            Console.WriteLine("Произведение чисел: " + result);
+            ShowResult("Произведение чисел", result);
         }
 
         //деление
@@ -35,7 +35,7 @@ namespace HomeWork1
             if (b != 0)
             {
                 double result = a / b;
-                Console.WriteLine("Частное чисел: " + result);
+                ShowResult("Частное чисел", result);
             }
             else
             {
@@ -49,12 +49,17 @@ namespace HomeWork1
             if (a >= 0)
             {
                 double result = Math.Sqrt(a);
-                Console.WriteLine("Квадратный корень числа: " + result);
+                ShowResult("Квадратный корень числа" , result);
             }
             else
             {
                 Console.WriteLine("Невозможно найти квадратный корень отрицательного числа.");
             }
+        }
+
+        public void ShowResult(string message, double result)
+        {
+            Console.WriteLine(message + ": " + result);
         }
     }
 }
